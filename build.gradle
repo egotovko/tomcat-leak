@@ -1,0 +1,19 @@
+group 'com.test'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+sourceCompatibility = 1.8
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.10.Final'
+    compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '1.11.4.RELEASE'
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '4.3.9.RELEASE'
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    providedCompile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+    providedCompile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    providedCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+    compile group: 'commons-dbcp', name: 'commons-dbcp', version: '1.4'
+}
